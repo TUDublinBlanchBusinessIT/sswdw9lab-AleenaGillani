@@ -1,27 +1,44 @@
-<HTML>
-    <BODY>
-        <FORM action="processScores.php" method="GET">
-            <label for"teamName">Enter team name:</label>
-            <input type="text" name="teamName"/>
-            <TABLE >
-                <TH>Match</TH><TH>Home Team Score</TH><TH>Away Team Score</TH>
-                <TR>
-                    <TD>1</TD>
-                    <TD><Input type="text" name="home1"/></TD>
-                    <TD><Input type="text" name="away1"/></TD>
-                </TR>
-                <TR>
-                    <TD>2</TD>
-                    <TD><Input type="text" name="home2"/></TD>
-                    <TD><Input type="text" name="away2"/></TD>
-                </TR>
-                <TR>
-                    <TD>3</TD>
-                    <TD><Input type="text" name="home3"/></TD>
-                    <TD><Input type="text" name="away3"/></TD>
-                </TR>
-            </TABLE>
-            <input type="submit"/>
-        </FORM>
-    </BODY>
-</HTML>
+<!DOCTYPE html> <!-- Added DOCTYPE declaration for modern HTML structure -->
+<html lang="en"> <!-- Specified language for accessibility -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Match Results</title>
+</head>
+<body>
+    <form action="processScores.php" method="GET">
+        <label for="teamName">Enter team name:</label> <!-- Changed `for"teamName"` to `for="teamName"` -->
+        <input type="text" id="teamName" name="teamName" required/> <!-- Added `id="teamName"` and `required` attribute -->
+        <br><br>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Match</th>
+                    <th>Home Team Score</th>
+                    <th>Away Team Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="number" name="home1" required/></td> 
+                    <td><input type="number" name="away1" required/></td> 
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="number" name="home2" required/></td> 
+                    <td><input type="number" name="away2" required/></td> 
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><input type="number" name="home3" required/></td> 
+                    <td><input type="number" name="away3" required/></td> 
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <input type="submit" value="Submit Results"/>
+    </form>
+</body>
+</html>
